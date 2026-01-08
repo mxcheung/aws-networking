@@ -55,3 +55,23 @@ On-prem
    (EC2)     (EC2)     (EC2)       (EC2)     (EC2)     (EC2)
    us-east-1                    eu-west-1
 ```
+
+```
+Producers (IoT / Apps / Logs)
+        |
+        v
+Amazon Kinesis Data Firehose
+ (auto-scaling, near real-time)
+        |
+   [Optional Lambda Transform]
+        |
+        v
+Amazon S3
+        |
+   AWS Glue Crawler
+        |
+   Glue Data Catalog
+        |
+Athena / Redshift Spectrum
+
+```
