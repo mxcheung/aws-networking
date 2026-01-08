@@ -1,6 +1,20 @@
 # aws-networking
 
 ```
+| Service / Feature            | Uses public internet? | Key notes (SAA exam focus)                   |
+| ---------------------------- | --------------------- | -------------------------------------------- |
+| **Site-to-Site VPN**         | ✅ **Yes**             | Encrypted IPsec over internet                |
+| **Direct Connect (DX)**      | ❌ **No**              | Private dedicated circuit                    |
+| **VPN over Direct Connect**  | ❌ **No**              | Encrypted over private DX                    |
+| **Transit Gateway (TGW)**    | ❌ **No**              | Routing hub, not transport                   |
+| **TGW inter-Region peering** | ❌ **No**              | AWS private backbone                         |
+| **VPC Peering**              | ❌ **No**              | Private AWS network                          |
+| **BGP**                      | ❌ **No**              | Routing protocol only                        |
+| **Private VIF**              | ❌ **No**              | Private IP to VPC/TGW                        |
+| **Public VIF**               | ❌ **No**              | Public AWS endpoints (still private DX path) |
+| **Transit VIF**              | ❌ **No**              | DX → Transit Gateway                         |
+````
+```
 On-prem
    |
    |--- Internet ---------> Site-to-Site VPN (BGP, encrypted)
