@@ -36,19 +36,19 @@ On-prem
                  │   (Customer Gateway + BGP) │
                  └─────────────┬─────────────┘
                                │
-                Internet        │ Private Circuit
+                Internet       │ Private Circuit
           ┌──────────────┐     │     ┌──────────────┐
-          │ Site-to-Site  │     │     │ Direct       │
-          │ VPN (IPsec)   │     │     │ Connect      │
+          │ Site-to-Site  │    │     │ Direct       │
+          │ VPN (IPsec)   │    │     │ Connect      │
           └───────┬──────┘     │     └───────┬──────┘
-                  │             │             │
-                  │             │       Transit VIF
-                  │             │             │
-        ┌─────────▼─────────┐   │   ┌────────▼────────┐
+                  │            │             │
+                  │            │       Transit VIF
+                  │            │             │
+        ┌─────────▼─────────┐  │    ┌────────▼────────┐
         │  Transit Gateway  │◀───┼──▶│  Transit Gateway │
         │   us-east-1       │ TGW Inter-Region Peering │
         └─────────┬─────────┘       └────────┬────────┘
-                  │                               │
+                  │                             │
         ┌─────────┼─────────┐         ┌─────────┼─────────┐
         │         │         │         │         │         │
      VPC-A     VPC-B     VPC-C       VPC-D     VPC-E     VPC-F
