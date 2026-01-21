@@ -75,4 +75,3 @@ Amazon S3
 Athena / Redshift Spectrum
 
 ```
-===akK@SQsEjgVRPU4ca===
